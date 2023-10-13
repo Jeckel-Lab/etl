@@ -33,4 +33,4 @@ grumphp:
         - "hotfix/*"
       additional_modifiers: ''
       allow_detached_head: true
-#    infection:
+    infection:

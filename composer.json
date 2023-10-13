@@ -50,11 +50,13 @@
         "analyze": "@analyse",
         "cs-fix": "vendor/bin/php-cs-fixer fix --diff --verbose",
         "phpmd": "vendor/bin/phpmd src,tests text ruleset.xml",
-        "test": "vendor/bin/phpunit --testdox",
+        "phpunit": "vendor/bin/phpunit --testdox",
         "test-coverage": [
             "Composer\\Config::disableProcessTimeout",
             "XDEBUG_MODE=coverage vendor/bin/phpunit --testdox --coverage-html=.build/coverage"
         ],
+        "infection": "vendor/bin/infection run",
+        "test": "@infection",
         "grumphp": "vendor/bin/grumphp run"
     }
 }

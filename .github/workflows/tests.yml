@@ -81,6 +81,9 @@ jobs:
       - name: Run PHPUnit
         run: vendor/bin/phpunit --testdox --coverage-text
 
+      - name: Run Infection
+        run: vendor/bin/infection run
+
       - name: Run Composer Require Checker
         run: vendor/bin/composer-require-checker
 
