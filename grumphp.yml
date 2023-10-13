@@ -6,19 +6,6 @@ grumphp:
         - phpmd
         - phpstan
   tasks:
-    phpcsfixer:
-#      allow_risky: ~
-#      cache_file: ~
-#      config: ~
-      rules:
-        line_ending: true
-        array_syntax:
-          syntax: short
-      using_cache: ~
-      config_contains_finder: false
-      verbose: true
-      diff: false
-      triggered_by: ['php']
     phpmd:
       whitelist_patterns:
         - /^src\/(.*)/

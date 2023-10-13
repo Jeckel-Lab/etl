@@ -43,7 +43,7 @@ final readonly class ETL
      * @param SUBJECT $contact
      * @return SUBJECT
      */
-    public function apply($payload, $contact)
+    public function apply(array|object $payload, array|object $contact): array|object
     {
         $load = $this->load;
         $transform = $this->transform;
@@ -55,5 +55,4 @@ final readonly class ETL
             $contact
         );
     }
-
 }
