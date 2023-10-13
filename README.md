@@ -2,6 +2,10 @@
 
 ETL (Extract - Transform - Load) pattern implementation
 
+> 🚀 Project generated with [Jeckel-Lab/cookiecutter-php](https://github.com/Jeckel-Lab/cookiecutter-php)
+
+> 🚧 Project is in **Work In Progress** status 🚧
+
 <!--
 [![Current version](https://img.shields.io/packagist/v/jeckel-lab/etl.svg?logo=composer)](https://packagist.org/packages/jeckel-lab/etl)
 [![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/jeckel-lab/etl)](https://packagist.org/packages/jeckel-lab/etl)

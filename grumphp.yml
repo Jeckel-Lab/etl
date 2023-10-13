@@ -3,14 +3,9 @@ grumphp:
     github_actions:
       tasks:
         - composer_require_checker
-        - phpcs
         - phpmd
         - phpstan
   tasks:
-    phpcs:
-      whitelist_patterns:
-        - /^src\/(.*)/
-        - /^tests\/(.*)/
     phpmd:
       whitelist_patterns:
         - /^src\/(.*)/

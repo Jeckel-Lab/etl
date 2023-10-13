@@ -23,7 +23,6 @@
         "symfony/var-dumper": "^6.3",
         "phpro/grumphp": "^2.1",
         "phpmd/phpmd": "^2.14",
-        "squizlabs/php_codesniffer": "^3.7",
         "maglnet/composer-require-checker": "^4.7",
         "infection/infection": "^0.27.4",
         "roave/security-advisories": "dev-latest"
@@ -51,11 +50,13 @@
         "analyze": "@analyse",
         "cs-fix": "vendor/bin/php-cs-fixer fix --diff --verbose",
         "phpmd": "vendor/bin/phpmd src,tests text ruleset.xml",
-        "test": "vendor/bin/phpunit --testdox",
+        "phpunit": "vendor/bin/phpunit --testdox",
         "test-coverage": [
             "Composer\\Config::disableProcessTimeout",
             "XDEBUG_MODE=coverage vendor/bin/phpunit --testdox --coverage-html=.build/coverage"
         ],
+        "infection": "vendor/bin/infection run",
+        "test": "@infection",
         "grumphp": "vendor/bin/grumphp run"
     }
 }
