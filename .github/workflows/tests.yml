@@ -69,8 +69,20 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
+      - name: Run PHPMD
+        run: vendor/bin/phpmd src,tests text ruleset.xml
+
+      - name: Run PHP-CS-Fixer
+        run: vendor/bin/php-cs-fixer check --diff --verbose
+
       - name: Run PHPStan
         run: vendor/bin/phpstan
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit --testdox --coverage-text
+
+      - name: Run Composer Require Checker
+        run: vendor/bin/composer-require-checker
+
+      - name: Run Roave Security Checker
+        run: composer update --dry-run roave/security-advisories
